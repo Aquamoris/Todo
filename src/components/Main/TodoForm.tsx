@@ -15,13 +15,14 @@ const TodoForm:React.FC = () => {
             dispatch(addTodo(text));
             setText('');
             dispatch(addModeSwitch());
+        } else {
+            dispatch(addModeSwitch());
         }
     }
 
     const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === 'Enter') {
             handleClick();
-            dispatch(addModeSwitch());
         }
     }
 

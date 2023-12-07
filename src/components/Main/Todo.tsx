@@ -10,7 +10,6 @@ const Todo:React.FC<Todo> = ({id, body, completed}) => {
 
     return (
         <div className={style.todo}>
-            {/*<input className={style.complete} onChange={() => dispatch(toggleTodoComplete(id))} type="checkbox" checked={completed}/>*/}
             <div className={cn(style.body, {
                 [style.bodyCompleted]: completed
             })}
